@@ -133,6 +133,7 @@
     "date-arithmetic": "^4.0.1",
     "dom-helpers": "^5.1.0",
     "invariant": "^2.2.4",
+    "jalali-moment": "^3.3.10",
     "lodash": "^4.17.11",
     "lodash-es": "^4.17.11",
     "memoize-one": "^5.1.1",

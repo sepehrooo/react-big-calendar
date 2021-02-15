@@ -1,12 +1,12 @@
 /* eslint no-fallthrough: off */
 import * as dates from 'date-arithmetic'
+import jMoment from 'jalali-moment'
 
 export {
   milliseconds,
   seconds,
   minutes,
   hours,
-  month,
   startOf,
   endOf,
   add,
@@ -29,6 +29,15 @@ const MILLI = {
 
 const MONTHS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 
+export function month(date, args) {
+  const m = jMoment(date)
+  if (args) {
+    return m.month(args).toDate()
+  } else {
+    return m.month(args)
+  }
+}
+
 export function monthsInYear(year) {
   let date = new Date(year, 0, 1)
 
@@ -36,15 +45,17 @@ export function monthsInYear(year) {
 }
 
 export function firstVisibleDay(date, localizer) {
-  let firstOfMonth = dates.startOf(date, 'month')
-
-  return dates.startOf(firstOfMonth, 'week', localizer.startOfWeek())
+  const md = jMoment.from(date)
+  md.locale('fa')
+  let firstOfMonth = md.startOf('month').startOf('week')
+  return firstOfMonth.toDate()
 }
 
 export function lastVisibleDay(date, localizer) {
-  let endOfMonth = dates.endOf(date, 'month')
-
-  return dates.endOf(endOfMonth, 'week', localizer.startOfWeek())
+  const md = jMoment.from(date)
+  md.locale('fa')
+  let endOfMonth = md.endOf('month').endOf('week')
+  return endOfMonth.toDate()
 }
 
 export function visibleDays(date, localizer) {

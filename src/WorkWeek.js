@@ -6,7 +6,7 @@ import TimeGrid from './TimeGrid'
 
 function workWeekRange(date, options) {
   return Week.range(date, options).filter(
-    d => [6, 0].indexOf(d.getDay()) === -1
+    d => [4, 5].indexOf(d.getDay()) === -1
   )
 }
 

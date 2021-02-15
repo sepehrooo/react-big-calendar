@@ -39,7 +39,11 @@ class EventCell extends React.Component {
     let userProps = getters.eventProp(event, start, end, selected)
 
     const content = (
-      <div className="rbc-event-content" title={tooltip || undefined}>
+      <div
+        style={{ direction: 'rtl', textAlign: 'right' }}
+        className="rbc-event-content"
+        title={tooltip || undefined}
+      >
         {Event ? (
           <Event
             event={event}
