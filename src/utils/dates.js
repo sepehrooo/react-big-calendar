@@ -44,14 +44,14 @@ export function monthsInYear(year) {
   return MONTHS.map(i => dates.month(date, i))
 }
 
-export function firstVisibleDay(date, localizer) {
+export function firstVisibleDay(date) {
   const md = jMoment.from(date)
   md.locale('fa')
   let firstOfMonth = md.startOf('month').startOf('week')
   return firstOfMonth.toDate()
 }
 
-export function lastVisibleDay(date, localizer) {
+export function lastVisibleDay(date) {
   const md = jMoment.from(date)
   md.locale('fa')
   let endOfMonth = md.endOf('month').endOf('week')

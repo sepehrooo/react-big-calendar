@@ -1,22 +1,22 @@
 let defaultMessages = {
-  date: 'Date',
-  time: 'Time',
-  event: 'Event',
-  allDay: 'All Day',
-  week: 'Week',
-  work_week: 'Work Week',
-  day: 'Day',
-  month: 'Month',
-  previous: 'Back',
-  next: 'Next',
-  yesterday: 'Yesterday',
-  tomorrow: 'Tomorrow',
-  today: 'Today',
-  agenda: 'Agenda',
-
-  noEventsInRange: 'There are no events in this range.',
-
-  showMore: total => `+${total} more`,
+  date: 'تاریخ',
+  time: 'زمان',
+  event: 'رخداد',
+  allDay: 'همش',
+  week: 'هفته',
+  work_week: 'هفته کاری',
+  day: 'روز',
+  month: 'ماه',
+  previous: 'قبلی',
+  next: 'بعدی',
+  yesterday: 'دیروز',
+  tomorrow: 'فردا',
+  today: 'امروز',
+  agenda: 'برنامه کار',
+  noEventsInRange: 'رخدادی برای نمایش وجود ندارد.',
+  showMore: function showMore(total) {
+    return '+' + total + ' \u0628\u06CC\u0634\u062A\u0631'
+  },
 }
 
 export default function messages(msgs) {
