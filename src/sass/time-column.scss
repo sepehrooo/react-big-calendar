@@ -10,7 +10,6 @@
   }
 }
 
-
 .rbc-timeslot-group {
   border-bottom: 1px solid $cell-border;
   min-height: 40px;
@@ -35,7 +34,7 @@
     left: 0;
     position: absolute;
     right: 0;
-    margin-right: 10px;
+    margin-left: 10px;
     top: 0;
 
     &.rbc-rtl {
@@ -54,7 +53,7 @@
     overflow: hidden;
     position: absolute;
   }
-  
+
   .rbc-background-event {
     @extend .rbc-event;
     opacity: 0.75;
@@ -110,10 +109,10 @@
   }
 
   .rbc-header,
-  .rbc-day-bg, {
+  .rbc-day-bg {
     width: 140px;
     // min-width: 0;
-    flex:  1 1 0;
+    flex: 1 1 0;
     flex-basis: 0 px;
   }
 }
